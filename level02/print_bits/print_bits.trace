@@ -1,0 +1,61 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z2r7p23.42.us.org
+Darwin 17.7.0 x86_64
+$> date
+Sun Sep  1 15:13:57 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.0.0 (clang-900.0.39.2)
+Target: x86_64-apple-darwin17.7.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/practice-exam_20190901/evjohnst8
+
+= Git history ==================================================================
+$> git -C /var/folders/kk/4s1vd9952nj5jgn57wspqsyc0000gp/T/tmpMTWbTV/user log --pretty='%H - %an, %ad : %s'
+1e31ae8a0ef5561e57811c55b70db40055b0faf2 - Evan Johnston, Sun Sep 1 15:12:10 2019 -0700 : .
+962d592b03ba952c8fef24d647c654f4c154d51f - Evan Johnston, Sun Sep 1 15:12:07 2019 -0700 : .
+2d9795acce641a102b1e3d82b2a034d592e58bdc - Evan Johnston, Sun Sep 1 15:10:02 2019 -0700 : .
+f5891d35ebe42962109a20fbbe26468d39120f34 - Evan Johnston, Sun Sep 1 15:05:56 2019 -0700 : .
+6a47acbe1fa5107c50a7783f42b0201007b73235 - Evan Johnston, Sun Sep 1 15:03:55 2019 -0700 : .
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/kk/4s1vd9952nj5jgn57wspqsyc0000gp/T/tmpMTWbTV/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1095 Sep  1 15:13 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Sep  1 15:13 maff_alpha
+drwxr-xr-x  3 deepthought  deepthought   102 Sep  1 15:13 print_bits
+drwxr-xr-x  3 deepthought  deepthought   102 Sep  1 15:13 ulstr
+
+/var/folders/kk/4s1vd9952nj5jgn57wspqsyc0000gp/T/tmpMTWbTV/user/maff_alpha:
+total 8
+-rw-r--r--  1 deepthought  deepthought  132 Sep  1 15:13 maff_alpha.c
+
+/var/folders/kk/4s1vd9952nj5jgn57wspqsyc0000gp/T/tmpMTWbTV/user/print_bits:
+total 8
+-rw-r--r--  1 deepthought  deepthought  315 Sep  1 15:13 print_bits.c
+
+/var/folders/kk/4s1vd9952nj5jgn57wspqsyc0000gp/T/tmpMTWbTV/user/ulstr:
+total 8
+-rw-r--r--  1 deepthought  deepthought  417 Sep  1 15:13 ulstr.c
+ 
+= print_bits ===================================================================
+$> gcc -Wextra -Wall -Werror main.c print_bits.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./5clxy3i0by4zj9opicmi32iz
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
