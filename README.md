@@ -9,4 +9,7 @@ Time Limit: 3 Hours 🕒
 
 The Exam has 4 Questions:
 
-The questions are randomised from [Level 1](https://github.com/pasqualerossi/42-School-Exam-Rank-02/tree/main/level01) and [Level 2](https://github.com/pasqualerossi/42-School-Exam-Rank-02/tree/main/level02).
+- Question 1: any Level 1 Question
+- Question 2: any Level 2 Question
+- Question 3: any Level 3 Question
+- Question 4: any Level 4 Question
