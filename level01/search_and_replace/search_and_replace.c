@@ -2,16 +2,12 @@
 
 int	main(int argc, char **argv)
 {
-	char	*str;
-	char	a;
-	char	b;
-	int		i;
+	char	a = argv[2][0];
+	char	b = argv[3][0];
+	int	i = 0;
 
-	i = 0;
 	if (argc == 4)
 	{
-		a = argv[2][0];
-		b = argv[3][0];
 		while(argv[1][i] != '\0')
 		{
 			if (argv[1][i] == a)
