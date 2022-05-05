@@ -2,9 +2,8 @@
 
 void	ft_swap(int		*a, int		*b)
 {
-	int		urish;
+	int	urish = *a;
 
-	urish = *a;
 	*a = *b;
 	*b = urish;
 }
