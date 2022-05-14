@@ -1,15 +1,15 @@
 # Norminette
 
-No Norminette in the Exam 💻
+No Norminette in the Exam
 
-# 42 Adelaide
-Time Limit: 3 Hours 🕒
+# Exam Details
+
+The Exam has 4 questions total. A random question is picked from each level (1-4).
+If you fail the exam, then you will restart at Level 1 again, when you retake the exam next time.  
 
 # Exam Questions
 
-The Exam has 4 questions total, with a random question picked from each level, starting from level 1 to level 4:
-
-### Question 1 (Level 1)
+### Question 1 is from Level 1
 
   - first_word
   - fizzbuzz
@@ -24,7 +24,7 @@ The Exam has 4 questions total, with a random question picked from each level, s
   - search_and_replace
   - ulstr 
 
-### Question 2 (Level 2)
+### Question 2 is from Level 2
 
   - alpha_mirror
   - camel_to_snake
@@ -47,8 +47,7 @@ The Exam has 4 questions total, with a random question picked from each level, s
   - union
   - wdmatch 
 
-### Question 3 (Level 3)
-
+### Question 3 is from Level 3
 
   - add_prime_sum
   - epur_str
@@ -66,7 +65,7 @@ The Exam has 4 questions total, with a random question picked from each level, s
   - str_capitalizer
   - tab_mult 
 
-### Question 4 (Level 4)
+### Question 4 is from Level 4
 
   - flood_fill
   - fprime
@@ -77,4 +76,12 @@ The Exam has 4 questions total, with a random question picked from each level, s
   - rev_wstr
   - rostring
   - sort_int_tab
-  - sort_list 
+  - sort_list
+
+# Total
+
+- Level 1 - 12 Questions
+- Level 2 - 20 Questions
+- Level 3 - 15 Questions
+- Level 4 - 10 Questions
+- Total = 57 Questions
