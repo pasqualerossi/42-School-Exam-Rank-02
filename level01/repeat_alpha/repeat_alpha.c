@@ -1,27 +1,26 @@
 #include <unistd.h>
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	int	i = 0;
-	int	count = 0;
+	int	letter = 0;
+	int	repeat = 1;
 
-	if (argc == 2)
+	if (ac == 2)
 	{
-		while (argv[1][i] != '\0')
+		while (av[1][letter])
 		{
-			if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
-				count = argv[1][i] - 64;
-			else if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
-				count = argv[1][i] - 96;
-			while (count)
+			if (av[1][letter] >= 'a' && av[1][letter] <= 'z')
+				repeat += av[1][letter] - 'a';
+			else if (av[1][letter] >= 'A' && av[1][letter] <= 'Z')
+				repeat += av[1][letter] - 'A';
+			while (repeat)
 			{
-				write(1, &argv[1][i], 1);
-				count--;
+				write(1, &av[1][letter], 1);
+				repeat--;
 			}
-			count = 1;
-			i++;
+			letter++;
 		}
 	}
-	write (1, "\n", 1);
+	write(1, "\n", 1);
 	return (0);
 }
