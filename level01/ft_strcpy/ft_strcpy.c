@@ -1,17 +1,12 @@
-#include <stdlib.h>
-
-char	*ft_strcpy(char *s1, char *s2)
+char	*ft_strcpy(char *dest, char *src)
 {
-	int	i = 0;
-
-	s1 = (char *)malloc(sizeof(char *));
-	if (!s1 || !s2)
-		return (NULL);
-	while(s2[i] != '\0')
+	int i = 0;
+	
+	while (src[i] != '\0')
 	{
-		s1[i] = s2[i];
+		dest[i] = src[i];
 		i++;
 	}
-	s1[i] = '\0';
-	return (s1);
+	dest[i] = '\0';
+	return (dest);
 }
