@@ -1,9 +1,7 @@
-#include <unistd.h>
-
 void	ft_swap(int *a, int *b)
 {
-	int	urish = *a;
+	int	temp = *a;
 
 	*a = *b;
-	*b = urish;
+	*b = temp;
 }
