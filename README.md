@@ -77,11 +77,11 @@ The exam has 4 questions total. A random question is picked from each level belo
   - sort_int_tab
   - sort_list
 
-# Total
+# Pool of Questions
 
 - Level 1 - 12 Questions
 - Level 2 - 20 Questions
 - Level 3 - 15 Questions
 - Level 4 - 10 Questions
 
-#### From a Pool of 57 Questions
+#### From a total pool of 57 Questions
