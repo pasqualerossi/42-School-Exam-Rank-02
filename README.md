@@ -1,11 +1,3 @@
-# Norminette
-
-There is no Norminette in the exam.
-
-# Exam Details
-
-The exam has 4 questions total. A random question is picked from each level below. If you fail the exam, you will restart at Level 1 again, when you retake the exam next time.  
-
 # Exam Questions
 
 ### Question 1 is from Level 1
@@ -76,3 +68,12 @@ The exam has 4 questions total. A random question is picked from each level belo
   - rostring
   - sort_int_tab
   - sort_list
+
+# Norminette
+
+There is no Norminette in the exam.
+
+# Exam Details
+
+The exam has 4 questions total. A random question is picked from each level below. If you fail the exam, you will restart at Level 1 again, when you retake the exam next time.  
+
