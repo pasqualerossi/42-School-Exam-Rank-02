@@ -1,6 +1,6 @@
 # Norminette
 
-No Norminette in the Exam
+There is no Norminette in the exam.
 
 # Exam Details
 
