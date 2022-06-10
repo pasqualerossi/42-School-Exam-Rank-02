@@ -6,7 +6,6 @@ int	main(int argc, char *argv[])
 
 	if (argc == 4)
 	{
-		if (!argv[2][1] && !argv[3][1])
 		{
 			while (argv[1][i])
 			{
