@@ -4,16 +4,13 @@
 
 int	main(int argc, char **argv)
 {
-	int	first;
-	int	second;
-	char	oper;
+	int	first = atoi(argv[1]);
+	int	second = atoi(argv[3]);
+	char	oper = argv[2][0];
 	int	res;
 
 	if (argc == 4)
 	{
-		oper = argv[2][0];
-		first = atoi(argv[1]);
-		second = atoi(argv[3]);
 		if (oper == '+')
 			res = first + second;
 		else if (oper == '-')
