@@ -44,7 +44,7 @@ void	ft_putnbr(int nb)
 	ft_putchar(nb % 10 + '0');
 }
 
-int main(int argc, char *argv[])
+int	main(int argc, char *argv[])
 {
 	int	i;
 	int	nbr;
