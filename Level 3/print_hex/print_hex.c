@@ -22,7 +22,7 @@ void	print_hex(int n)
 	write(1, &hex_digits[n % 16], 1);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	if (argc == 2)
 		print_hex(ft_atoi(argv[1]));
