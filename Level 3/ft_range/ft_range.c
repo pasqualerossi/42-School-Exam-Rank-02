@@ -3,11 +3,10 @@
 
 int	*ft_range(int start, int end)
 {
-	int	size;
+	int	size = end - start;
 	int	*ret;
 	int	*ptr;
 
-	size = end - start;
 	if (size)
 	{
 		ptr = (int *)malloc(sizeof(int) * size);
@@ -25,4 +24,3 @@ int	*ft_range(int start, int end)
 	}
 	return (NULL);
 }
-
