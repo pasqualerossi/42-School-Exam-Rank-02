@@ -1,54 +1,22 @@
-// Passed Moulinette 2019.09.01
-
 #include <stdlib.h>
 
-int		absolute_value(int n)
+int *ft_rrange(int start, int end)
 {
-	if (n < 0)
-		return (-n);
-	return (n);
-}
-
-int		*ft_rrange(int start, int end)
-{
-	int number_of_ints;
-	int *array;
-	int step;
-	int i;
-
-	number_of_ints = 1 + absolute_value(end - start);
-	array = malloc(sizeof(int) * number_of_ints);
+	int *range;
+	int i = 0;
+	int n = end - start + 1;
 
 	if (start > end)
-		step = 1;
-	else
-		step = -1;
-
-	i = 0;
-	while (i < number_of_ints)
+		return (ft_rrange(end, start));
+	range = (int *)malloc(sizeof(int) * n);
+	if (range)
 	{
-		array[i] = end;
-		end = end + step;
-		++i;
+		while (i < n)
+		{
+			range[i] = start;
+			start++;
+			i++;
+		}
 	}
-	return (array);
+	return (range);
 }
-
-//-----------------------------------------------------
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	int start = 0;
-// 	int end = -3;
-
-// 	int *arr = ft_rrange(start, end);
-
-// 	int i = 0;
-// 	while (i < 1 + absolute_value(end - start))
-// 	{
-// 		printf("%d, ", arr[i]);
-// 		++i;
-// 	}
-// 	printf("\n");
-// }
