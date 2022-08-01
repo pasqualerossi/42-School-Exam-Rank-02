@@ -1,68 +1,39 @@
-// Passed Moulinette 2019.09.01
-
 #include <stdlib.h>
 
-int		absolute_value(int nbr)
+char    *ft_itoa(int nbr)
 {
-	if (nbr < 0)
-		return (-nbr);
-	return (nbr);
-}
+	int	len;
+	long	n_tmp;
+	char	*str;
 
-int		get_len(int nbr)
-{
-	int len = 0;
-	if (nbr <= 0)
-		++len;
-	while (nbr != 0)
+	len = 0;
+	n_tmp = nbr;
+	str[len] ='\0';
+	
+	if (nbr == -2147483648)
+		return ("-2147483648");
+	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
+		return (NULL);
+	if (nbr == 0)
 	{
-		++len;
-		nbr = nbr / 10;
+		str[0] = '0';
+		return (str);
 	}
-	return (len);
-}
-
-char	*ft_itoa(int nbr)
-{
-	char *result;
-	int len;
-
-	len = get_len(nbr);
-	result = malloc(sizeof(char) * (len + 1));
-	result[len] = '\0';
-
 	if (nbr < 0)
-		result[0] = '-';
-	else if (nbr == 0)
-		result[0] = '0';
-
-	while (nbr != 0)
 	{
-		--len;
-		result[len] = absolute_value(nbr % 10) + '0';
-		nbr = nbr / 10;
+		len += 1;
+		nbr *= -1;
+		str[0] = '-';
 	}
-	return (result);
+	while (n_tmp)
+	{
+		n_tmp /= 10;
+		len += 1;
+	}
+	while (nbr)
+	{
+		str[--len] = (nbr % 10) + '0';
+		nbr /= 10;
+	}
+	return (str);
 }
-
-//-------------------------------------------------------
-// #include <stdio.h>
-// #include <limits.h>
-
-// int		main(void)
-// {
-// 	int d = INT_MIN;
-// 	printf("%d =? %s\n", d, ft_itoa(d));
-
-// 	d = -13;
-// 	printf("%d =? %s\n", d, ft_itoa(d));
-
-// 	d = 0;
-// 	printf("%d =? %s\n", d, ft_itoa(d));
-
-// 	d = 5;
-// 	printf("%d =? %s\n", d, ft_itoa(d));
-
-// 	d = INT_MAX;
-// 	printf("%d =? %s\n", d, ft_itoa(d));
-// }
