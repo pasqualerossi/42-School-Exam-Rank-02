@@ -1,5 +1,3 @@
-// Passed Moulinette 2019.09.01
-
 #include <string.h>
 
 char	*ft_strchr(const char *s, int c)
@@ -25,13 +23,3 @@ size_t	ft_strspn(const char *s, const char *accept)
 	}
 	return (i);
 }
-
-//---------------------------------------------------------------
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char haystack[] = "This is a test string";
-// 	char accept[] = "tgaThis";
-
-// 	printf("%zu\n", ft_strspn(haystack, accept));
-// }
