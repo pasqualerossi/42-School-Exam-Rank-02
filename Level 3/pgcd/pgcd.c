@@ -1,28 +1,25 @@
-// Passed Moulinette 2019.09.01
-
 #include <stdio.h>
 #include <stdlib.h>
 
-void	pgcd(int a, int b)
+int main(int argc, char const *argv[])
 {
-	int n = a;
+	int nbr1;
+	int nbr2;
 
-	while (n > 0)
-	{
-		if (a % n == 0 && b % n == 0)
-		{
-			printf("%d", n);
-			return;
-		}
-		--n;
-	}
-}
-
-int		main(int argc, char **argv)
-{
 	if (argc == 3)
-		pgcd(atoi(argv[1]), atoi(argv[2]));
-
+	{
+		if ((nbr1 = atoi(argv[1])) > 0 && (nbr2 = atoi(argv[2])) > 0)
+		{
+			while (nbr1 != nbr2)
+			{
+				if (nbr1 > nbr2)
+					nbr1 -= nbr2;
+				else
+					nbr2 -= nbr1;
+			}
+			printf("%d", nbr1);
+		}
+	}
 	printf("\n");
 	return (0);
 }
