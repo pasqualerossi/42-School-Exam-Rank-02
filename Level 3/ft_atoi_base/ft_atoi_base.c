@@ -1,5 +1,3 @@
-// Passed Moulinette 2019.09.01
-
 char	to_lower(char c)
 {
 	if (c >= 'A' && c <= 'Z')
@@ -43,11 +41,3 @@ int		ft_atoi_base(const char *str, int str_base)
 	}
 	return (result);
 }
-
-//-------------------------------------------------
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	printf("%d\n", ft_atoi_base("15690b80B", 13));
-// }
