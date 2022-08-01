@@ -4,8 +4,6 @@
 ### The Problem
 We are asked to write a program that is given two strings as argument, each representing a positive whole number. It finds the [greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor) and prints it.
 
-[ [Full Subject](subject.en.txt) | [Examples](examples.txt) ]
-
 ### Approach
 Convert the arguments from strings to ints. Starting with a test number equal to the smaller of the two numbers passed as argument, check if the test value divides both numbers evenly. If it does, the test number is the greatest common divisor; print it and exit. Otherwise, subtract 1 from the test number and test again until until the GCD is found.
 
