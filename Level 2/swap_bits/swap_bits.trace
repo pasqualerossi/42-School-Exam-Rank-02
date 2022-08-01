@@ -1,0 +1,60 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z3r2p5.42.us.org
+Darwin 17.4.0 x86_64
+$> date
+Mon Sep  2 12:01:30 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.4.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/practice-exam_20190902/evjohnst12
+
+= Git history ==================================================================
+$> git -C /var/folders/21/d9tv_7356rz506_y7h_znfgr0000gp/T/tmpJhdSXL/user log --pretty='%H - %an, %ad : %s'
+0c58ac40b5331c8c49e0f452da51b6d5fc2a3cd6 - Evan Johnston, Mon Sep 2 11:59:39 2019 -0700 : .
+482129e04cf9dd10bf0d71803bf848fb11225d49 - Evan Johnston, Mon Sep 2 11:37:15 2019 -0700 : .
+6de9abd7ecb9b1f4ec7a13e98390420f3cf3e9a7 - Evan Johnston, Mon Sep 2 11:35:13 2019 -0700 : .
+85021ddf7aa7e28f67797b206c45635039770828 - Evan Johnston, Mon Sep 2 11:35:00 2019 -0700 : .
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/21/d9tv_7356rz506_y7h_znfgr0000gp/T/tmpJhdSXL/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  907 Sep  2 12:01 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Sep  2 12:01 only_z
+drwxr-xr-x  3 deepthought  deepthought  102 Sep  2 12:01 search_and_replace
+drwxr-xr-x  3 deepthought  deepthought  102 Sep  2 12:01 swap_bits
+
+/var/folders/21/d9tv_7356rz506_y7h_znfgr0000gp/T/tmpJhdSXL/user/only_z:
+total 8
+-rw-r--r--  1 deepthought  deepthought  104 Sep  2 12:01 only_z.c
+
+/var/folders/21/d9tv_7356rz506_y7h_znfgr0000gp/T/tmpJhdSXL/user/search_and_replace:
+total 8
+-rw-r--r--  1 deepthought  deepthought  427 Sep  2 12:01 search_and_replace.c
+
+/var/folders/21/d9tv_7356rz506_y7h_znfgr0000gp/T/tmpJhdSXL/user/swap_bits:
+total 8
+-rw-r--r--  1 deepthought  deepthought  497 Sep  2 12:01 swap_bits.c
+ 
+= swap_bits ====================================================================
+$> gcc -Wextra -Wall -Werror main.c swap_bits.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./lu8apq8xo4ymfkjjhr71sxyw
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

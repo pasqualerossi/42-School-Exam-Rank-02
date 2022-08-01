@@ -1,0 +1,106 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1z1r7p20.42.us.org
+Darwin 17.5.0 x86_64
+$> date
+Sun Sep  1 14:03:31 PDT 2019
+$> gcc --version
+Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+$> clang --version
+Apple LLVM version 9.1.0 (clang-902.0.39.1)
+Target: x86_64-apple-darwin17.5.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2019/c-exam-alone-in-the-dark-beginner/practice-exam_20190901/evjohnst4
+
+= Git history ==================================================================
+$> git -C /var/folders/cx/14nyg88n3tj2s7zw78q0j2r40000gp/T/tmp4qHlVu/user log --pretty='%H - %an, %ad : %s'
+80651f9ebe6f678a07601f7a55781c1d1c1eb42c - Evan Johnston, Sun Sep 1 14:01:42 2019 -0700 : .
+b334f3f875ae1b5598863c7ffccf4d509ae17fcb - Evan Johnston, Sun Sep 1 14:01:40 2019 -0700 : .
+a0fa8a4fc34cdf773e5085789146c4ffd29f6537 - Evan Johnston, Sun Sep 1 13:59:39 2019 -0700 : .
+e1a50130e6397e2f0412bad2ea2c21f2018d7806 - Evan Johnston, Sun Sep 1 13:59:38 2019 -0700 : .
+260cc27dbe32190af0aaeeb5260b2ea5f73a0686 - Evan Johnston, Sun Sep 1 13:59:25 2019 -0700 : .
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/cx/14nyg88n3tj2s7zw78q0j2r40000gp/T/tmp4qHlVu/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1134 Sep  1 14:03 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Sep  1 14:03 aff_first_param
+drwxr-xr-x  3 deepthought  deepthought   102 Sep  1 14:03 ft_strspn
+drwxr-xr-x  3 deepthought  deepthought   102 Sep  1 14:03 rotone
+
+/var/folders/cx/14nyg88n3tj2s7zw78q0j2r40000gp/T/tmp4qHlVu/user/aff_first_param:
+total 8
+-rw-r--r--  1 deepthought  deepthought  265 Sep  1 14:03 aff_first_param.c
+
+/var/folders/cx/14nyg88n3tj2s7zw78q0j2r40000gp/T/tmp4qHlVu/user/ft_strspn:
+total 8
+-rw-r--r--  1 deepthought  deepthought  592 Sep  1 14:03 ft_strspn.c
+
+/var/folders/cx/14nyg88n3tj2s7zw78q0j2r40000gp/T/tmp4qHlVu/user/rotone:
+total 8
+-rw-r--r--  1 deepthought  deepthought  388 Sep  1 14:03 rotone.c
+ 
+= ft_strspn ====================================================================
+$> gcc -Wextra -Wall -Werror main.c ft_strspn.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./5f2f4aivf17cyy1jo5rp7xp6 'chat' 'chien'
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./kvmzqbv7lufxgbkea5hjus8n 'ABCDEFG019874' 'ABCD'
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./34991xhp7b5tf6a3u8e1s12c ' ' '1234567890'
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./fbnzcufk2ga76ifro2d6xpxx '1234567890' ' '
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./9d7ne6492n6deexet9sawl6j ';fjhbsdnc xwpusgrhbs' 'opsiyhgvdzbnciox'
+$> diff -U 3 user_output_test5 test5.output | cat -e
+
+Diff OK :D
+= Test 6 ===================================================
+$> ./dlzp3752cr9vs9kmrn47ctrn '0987654321' '1234567890'
+$> diff -U 3 user_output_test6 test6.output | cat -e
+
+Diff OK :D
+= Test 7 ===================================================
+$> ./cucrks9o0f448af3swwelfw8 '/bin/ls/' '/bien/ls/~'
+$> diff -U 3 user_output_test7 test7.output | cat -e
+
+Diff OK :D
+= Test 8 ===================================================
+$> ./h7rlmf51v8zozlyib5wrp5k5 '~`,./<>?!@#$%^&*()-+_{}[]|\' 'abcdefghijklmnopqrstuvzxyz'
+$> diff -U 3 user_output_test8 test8.output | cat -e
+
+Diff OK :D
+= Test 9 ===================================================
+$> ./pxx7pm0fxay0l7xadsclrtt8 'Farenheit' 'Degree'
+$> diff -U 3 user_output_test9 test9.output | cat -e
+
+Diff OK :D
+= Test 10 ==================================================
+$> ./ith8n341k0l4e6vecf5vkvdk 'Et quoniam inedia gravi adflictabantur, locum petivere Paleas nomine, vergentem in mare, valido muro firmatum, ubi conduntur nunc usque commeatus distribui militibus omne latus Isauriae defendentibus adsueti. circumstetere igitur hoc munimentum per triduum et trinoctium et cum neque adclivitas ipsa sine discrimine adiri letali, nec cuniculis quicquam geri posset, nec procederet ullum obsidionale commentum, maesti excedunt postrema vi subigente maiora viribus adgressuri.' 'Et quoniam inedia gravi adflictabantur, locum petivere Paleas nomine, vergentem in mare, valido muro firmatum, ubi conduntur nunc usque commeatus distribui militibus omne latus Isauriae defendentibus adsueti. circumstetere igitur hoc munimentum per triduum et trinoctium et cum neque adclivitas ipsa sine discrimine adiri letali, nec cuniculis quicquam geri posset, nec procederet ullum obsidionale commentum, maesti excedunt postrema vi subigente maiora viribus adgressuri.'
+$> diff -U 3 user_output_test10 test10.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================
