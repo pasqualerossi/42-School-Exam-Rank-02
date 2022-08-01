@@ -4,8 +4,6 @@
 ### The Problem
 We are asked to write a program that is given a string as argument. It prints the 2nd through last words followed by the first word, with exactly one space between the words printed.
 
-[ [Full Subject](subject.en.txt) | [Examples](examples.txt) ]
-
 ### Approach
 Create a huge array of pointers to char. Step through the string passed as argument, converting spaces & tabs to '\0', and as the beginning of each word is found, store a pointer to it in the array. Print the 2nd through last words in the array followed by a space, then print the first word.
 
