@@ -4,11 +4,10 @@ char	*ft_strdup(char *src)
 {
 	int	i = 0;
 	int	length = 0;
-	char	*strcpy;
+	char	*strcpy = malloc(length + 1);
 
 	while (src[length])
 		length++;
-	strcpy = malloc(length + 1);
 	if (strcpy != NULL)
 	{
 		while (src[i])
