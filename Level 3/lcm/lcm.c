@@ -1,11 +1,9 @@
-// Passed Moulinette 2019.09.01
-
-unsigned int	lcm(unsigned int a, unsigned int b)
+unsigned int lcm(unsigned int a, unsigned int b)
 {
+	unsigned int n;	
+
 	if (a == 0 || b == 0)
 		return (0);
-
-	unsigned int n;
 	if (a > b)
 		n = a;
 	else
@@ -18,11 +16,3 @@ unsigned int	lcm(unsigned int a, unsigned int b)
 		++n;
 	}
 }
-
-//--------------------------------------------------------------
-// #include <stdio.h>
-
-// int main(void)
-// {
-// 	printf("%u\n", lcm(0, 5));
-// }
