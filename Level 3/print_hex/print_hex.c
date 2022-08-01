@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-int		ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
 	int n = 0;
 
