@@ -1,5 +1,3 @@
-// Passed Moulinette 2019.09.01
-
 #include <unistd.h>
 
 int		ft_atoi(char *str)
@@ -28,6 +26,5 @@ int		main(int argc, char **argv)
 {
 	if (argc == 2)
 		print_hex(ft_atoi(argv[1]));
-
 	write(1, "\n", 1);
 }
