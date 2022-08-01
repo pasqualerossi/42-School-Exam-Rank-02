@@ -1,62 +1,73 @@
-// Passed Moulinette 2019.09.01
-
 #include <unistd.h>
+#include <stdlib.h>
 
-int		skip_whitespace(char *str, int i)
+void	ft_putstr(char *str)
 {
-	while (str[i] == ' ' || str[i] == '\t')
-		++i;
-	return (i);
-}
+	int i;
 
-int		ft_wordlen(char *str)
-{
-	int i = 0;
-
-	while (str[i] != '\0' && str[i] != ' ' && str[i] != '\t')
-		++i;
-	return (i);
-}
-
-int		print_word(char *str, int i, int *is_first)
-{
-	int word_len;
-
-	i = skip_whitespace(str, i);
-	word_len = ft_wordlen(str + i);
-	if (*is_first == 0)
-		write(1, " ", 1);
-	write(1, str + i, word_len);
-	*is_first = 0;
-	return (i + word_len);
-}
-
-int		epur_str(char *str)
-{
-	int i = 0;
-	int is_first = 1;
-
-	i = skip_whitespace(str, i);
-	while (str[i] != '\0')
+	i = 0;
+	while (str[i])
 	{
-		i = print_word(str, i, &is_first);
-		i = skip_whitespace(str, i);
+		write(1, &str[i], 1);
+		i++;
 	}
-	return (is_first);
 }
 
 int		main(int argc, char **argv)
 {
-	if (argc >= 2)
-	{
-		char *str = argv[1];
-		int i = 0;
-		int is_first;
+	char	*mot;
+	int	i;
+	int	d;
+	int	k;
 
-		i = skip_whitespace(str, i);
-		i = i + ft_wordlen(str + i);
-		is_first = epur_str(str + i);
-		print_word(str, 0, &is_first);
+	i = 0;
+	k = 0;
+	mot = NULL;
+	if (argc > 1)
+	{
+		while (argv[1][i] && (argv[1][i] == ' '
+					|| argv[1][i] == '\t' || argv[1][i] == '\n'))
+			i++;
+		d = i;
+		while (argv[1][i] && argv[1][i] != ' '
+				&& argv[1][i] != '\t' && argv[1][i] != '\n')
+		{
+			k++;
+			i++;
+		}
+		mot = (char*)malloc(sizeof(char) * k + 1);
+		i = 0;
+		while (i < k)
+		{
+			mot[i] = argv[1][d + i];
+			i++;
+		}
+		mot[k] = '\0';
+		i = d + k;
+		while (argv[1][i] && (argv[1][i] == ' '
+					|| argv[1][i] == '\t' || argv[1][i] == '\n'))
+			i++;
+		d = 0;	
+		while (argv[1][i])
+		{
+			if (d == 1 && argv[1][i] != ' ' &&
+					argv[1][i] != '\t' && argv[1][i] != '\n')
+			{
+				write(1, " ", 1);
+				write(1, &argv[1][i], 1);
+				d = 0;
+			}
+			else if (d == 0 && argv[1][i] != ' ' &&
+					argv[1][i] != '\t' && argv[1][i] != '\n')
+				write(1, &argv[1][i], 1);
+			else
+				d = 1;
+			i++;
+		}
+		if (i > k)
+			write(1, " ", 1);
+		ft_putstr(mot);
+		free(mot);
 	}
 	write(1, "\n", 1);
 	return (0);
