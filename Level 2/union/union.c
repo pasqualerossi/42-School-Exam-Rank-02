@@ -1,5 +1,3 @@
-// Passed Moulinette 2019.09.01
-
 #include <unistd.h>
 
 void	print_union(char *a, char *b)
