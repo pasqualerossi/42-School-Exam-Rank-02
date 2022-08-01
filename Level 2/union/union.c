@@ -31,8 +31,7 @@ void	union(char *a, char *b)
 int		main(int argc, char **argv)
 {
 	if (argc == 3)
-		print_union(argv[1], argv[2]);
-
+		union(argv[1], argv[2]);
 	write(1, "\n", 1);
 	return (0);
 }
