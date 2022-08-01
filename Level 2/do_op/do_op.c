@@ -1,29 +1,21 @@
-#include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-int	main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int	first = atoi(argv[1]);
-	int	second = atoi(argv[3]);
-	char	oper = argv[2][0];
-	int	res;
-
 	if (argc == 4)
 	{
-		if (oper == '+')
-			res = first + second;
-		else if (oper == '-')
-			res = first - second;
-		else if (oper == '*')
-			res = first * second;
-		else if (oper == '/')
-			res = first / second;
-		else if (oper == '%')
-			res = first % second;
-		printf("%d\n", res);
+		if (argv[2][0] == '+')
+			printf("%d", (atoi(argv[1]) + atoi(argv[3])));
+		if (argv[2][0] == '-')
+			printf("%d", (atoi(argv[1]) - atoi(argv[3])));
+		if (argv[2][0] == '*')
+			printf("%d", (atoi(argv[1]) * atoi(argv[3])));
+		if (argv[2][0] == '/')
+			printf("%d", (atoi(argv[1]) / atoi(argv[3])));
+		if (argv[2][0] == '%')
+			printf("%d", (atoi(argv[1]) % atoi(argv[3])));
 	}
-	else
-		write(1, "\n", 1);
+	printf("\n");
 	return (0);
 }
