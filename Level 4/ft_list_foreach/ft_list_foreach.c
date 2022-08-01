@@ -3,11 +3,12 @@
 
 void	ft_list_foreach(t_list *begin_list, void (*f)(void *))
 {
-	if (begin_list == 0)
-		return;
-	while (begin_list != 0)
+	t_list *list_ptr;
+
+	list_ptr = begin_list;
+	while (list_ptr)
 	{
-		f(begin_list->data);
-		begin_list = begin_list->next;
+		(*f)(list_ptr->data);
+		list_ptr = list_ptr->next;
 	}
 }
