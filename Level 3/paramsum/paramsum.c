@@ -10,7 +10,7 @@ void	ft_putnbr(int n)
 	write(1, &digit, 1);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	(void)argv;
 
