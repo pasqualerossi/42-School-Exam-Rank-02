@@ -5,7 +5,7 @@ char	to_lower(char c)
 	return (c);
 }
 
-int		get_digit(char c, int digits_in_base)
+int get_digit(char c, int digits_in_base)
 {
 	int max_digit;
 	if (digits_in_base <= 10)
@@ -21,7 +21,7 @@ int		get_digit(char c, int digits_in_base)
 		return (-1);
 }
 
-int		ft_atoi_base(const char *str, int str_base)
+int ft_atoi_base(const char *str, int str_base)
 {
 	int result = 0;
 	int sign = 1;
