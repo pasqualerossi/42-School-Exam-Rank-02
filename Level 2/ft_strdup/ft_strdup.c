@@ -2,8 +2,8 @@
 
 char	*ft_strdup(char *src)
 {
-	int		i = 0;
-	int		length = 0;
+	int	i = 0;
+	int	length = 0;
 	char	*strcpy;
 
 	while (src[length])
