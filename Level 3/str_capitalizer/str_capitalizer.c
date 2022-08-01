@@ -1,49 +1,38 @@
-// Passed Moulinette 2019.09.01
-
 #include <unistd.h>
 
 void	str_capitalizer(char *str)
 {
-	while (*str != '\0')
+	int i = 0;
+
+	if (str[i] >= 'a' && 'z' >= str[i])
+		str[i] -= 32;
+	write(1, &str[i], 1);
+	while (str[++i])
 	{
-		while (*str != '\0' && (*str == ' ' || *str == '\t'))
-		{
-			write(1, str, 1);
-			++str;
-		}
-
-		if (*str != '\0')
-		{
-			if (*str >= 'a' && *str <= 'z')
-				*str = *str - ('a' - 'A');
-			write(1, str, 1);
-			++str;
-		}
-
-		while (*str != '\0' && *str != ' ' && *str != '\t')
-		{
-			if (*str >= 'A' && *str <= 'Z')
-				*str = *str + ('a' - 'A');
-			write(1, str, 1);
-			++str;
-		}
+		if (str[i] >= 'A' && 'Z' >= str[i])
+			str[i] += 32;
+		if ((str[i] >= 'a' && 'z' >= str[i]) && (str[i - 1] == ' ' || \
+		str[i - 1] == '\t'))
+			str[i] -= 32;
+		write(1, &str[i], 1);
 	}
-	write(1, "\n", 1);
 }
 
-int		main(int argc, char **argv)
+int		main(int argc, char *argv[])
 {
-	if (argc == 1)
+	int i;
+
+	if (argc < 2)
 		write(1, "\n", 1);
 	else
 	{
-		int i = 1;
+		i = 1;
 		while (i < argc)
 		{
 			str_capitalizer(argv[i]);
-			++i;
+			write(1, "\n", 1);
+			i += 1;
 		}
 	}
-
 	return (0);
 }
