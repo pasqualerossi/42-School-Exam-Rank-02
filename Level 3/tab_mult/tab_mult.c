@@ -1,52 +1,70 @@
-// Passed Moulinette 2019.09.02
-
 #include <unistd.h>
 
-int		ft_atoi(char *str)
+int	ft_atoi(char *str)
 {
-	int n = 0;
+	int result;
+	int sign;
 
+	result = 0;
+	sign = 1;
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	if (*str == '-')
+		sign = -1;
+	if (*str == '-' || *str == '+')
+		str++;
 	while (*str >= '0' && *str <= '9')
 	{
-		n = n * 10;
-		n = n + *str - '0';
-		++str;
+		result = result * 10 + *str - '0';
+		str++;
 	}
-	return (n);
+	return (sign * result);
 }
 
-void	ft_putnbr(int n)
+void	ft_putchar(char c)
 {
-	if (n >= 10)
-		ft_putnbr(n / 10);
-
-	char c = (n % 10) + '0';
 	write(1, &c, 1);
 }
 
-void	tab_mult(char *str)
+void	ft_putnbr(int nb)
 {
-	int n;
-	int i = 1;
-
-	n = ft_atoi(str);
-	while (i <= 9)
+	if (nb == -2147483648)
 	{
-		ft_putnbr(i);
-		write(1, " x ", 3);
-		ft_putnbr(n);
-		write(1, " = ", 3);
-		ft_putnbr(i * n);
-		write(1, "\n", 1);
-		++i;
+		ft_putchar('-');
+		ft_putchar('2');
+		nb = (nb % 1000000000 * -1);
 	}
+	if (nb < 0)
+	{
+		ft_putchar('-');
+		nb = (nb * -1);
+	}
+	if (nb / 10 > 0)
+		ft_putnbr(nb / 10);
+	ft_putchar(nb % 10 + '0');
 }
 
-int		main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	if (argc == 2)
-		tab_mult(argv[1]);
-	else
+	int	i;
+	int	nbr;
+
+	if (argc != 2)
 		write(1, "\n", 1);
+	else
+	{
+		i = 1;
+		nbr = ft_atoi(argv[1]);
+		while (i <= 9)
+		{
+			ft_putnbr(i);
+			write(1, " x ", 3);
+			ft_putnbr(nbr);
+			write(1, " = ", 3);
+			ft_putnbr(i * nbr);
+			write(1, "\n", 1);
+			i += 1;
+		}
+	}
 	return (0);
 }
