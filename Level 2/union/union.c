@@ -2,7 +2,7 @@
 
 void	union(char *a, char *b)
 {
-	int characters[128] = { 0 };
+	int characters[128] = {0};
 	int c;
 
 	while (*a != '\0')
