@@ -1,62 +1,35 @@
-// Passed Moulinette 2019.09.01
-
 #include <unistd.h>
 
-int		ft_atoi(char *str)
+int is_prime(int num)
 {
-	int n = 0;
-
-	while (*str >= '0' && *str <= '9')
+	int i = 3;
+	
+	if (num <= 1)
+		return (0);
+	if (num % 2 == 0 && num > 2)
+		return (0);
+	while (i < (num / 2))
 	{
-		n *= 10;
-		n += *str - '0';
-		++str;
+		if (num % i == 0)
+			return 0;
+		i += 2;
 	}
-	return (n);
+	return 1;
 }
 
-void	ft_putnbr(int n)
-{
-	if (n >= 10)
-		ft_putnbr(n / 10);
-	char c = (n % 10) + '0';
-	write(1, &c, 1);
-}
-
-int		is_prime(int n)
-{
-	int i = 2;
-
-	while (i < n)
-	{
-		if (n % i == 0)
-			return (0);
-		++i;
-	}
-	return (1);
-}
-
-int		add_prime_sum(int n)
+int main(int argc, char *argv[])
 {
 	int sum = 0;
-	int i = 2;
-
-	while (i <= n)
+	int nb = ft_atoi(argv[1]);
+	
+	if (argc == 2)
 	{
-		if (is_prime(i) == 1)
-			sum += i;
-		++i;
+		while (nb > 0)
+			if (is_prime(nb--))
+				sum += (nb + 1);
+		ft_putnbr(sum);
 	}
-	return (sum);
-}
-
-int		main(int argc, char **argv)
-{
-	int n;
-
-	if (argc == 2 && (n = ft_atoi(argv[1])))
-		ft_putnbr(add_prime_sum(n));
-	else
+	if (argc != 2)
 		ft_putnbr(0);
 	write(1, "\n", 1);
 	return (0);
