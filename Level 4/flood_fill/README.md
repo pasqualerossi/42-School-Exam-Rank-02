@@ -96,10 +96,6 @@ We are asked to write a function that takes arguments of a 2-dimensional array o
 ```
 </details>
 
-### References
-* [Subject File (English)](subject.en.txt)
-* [flood_fill.c](flood_fill.c)
-
 ### Approach
 
 Save the value of the character at the starting location. For each location beginning with the starting position, check if the current location is in-bounds and if the character at the current location matches the character originally at the starting location. If so, change the character at the current location to 'F' and repeat with the locations one row above, one row below, one column to the left, and one column to the right.
