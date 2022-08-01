@@ -1,23 +1,23 @@
-int     ft_atoi(const char *str)
+int	ft_atoi(char *str)
 {
-    int     i;
-    int     result;
-    int    neg;
+	int result = 0;
+	int sign = 1;
 
-    i = 0;  
-    result = 0;
-    neg = 1;
-    while (str[i] == '\n' || str[i] == '\t' || str[i] == '\v' || str[i] == '\r' || str[i] == '\f')
-        i++;
-    if (str[i] == '-')
-        neg *= -1;
-    else if (str[i] == '+')
-        i++;
-    while(str[i] != '\0' && str[i] >= '0' && str[i] <= '9')
-    {
-        result *= 10;
-        result += str[i] - '0';
-        i++;
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+    {	
+        str++;
     }
-    return (result * neg);
+	if (*str == '-')
+    {
+		sign = -1;
+    }
+	if (*str == '-' || *str == '+')
+    {
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		result = result * 10 + *str - '0';
+		str++;
+	}
+	return (sign * result);
 }
