@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void	print_union(char *a, char *b)
+void	union(char *a, char *b)
 {
 	int characters[128] = { 0 };
 	int c;
