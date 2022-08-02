@@ -1,5 +1,3 @@
-// Passed Moulinette 2019.09.02
-
 #include <stdlib.h>
 
 int		ft_wordlen(char *str)
@@ -69,21 +67,3 @@ char	**ft_split(char *str)
 	fill_words(array, str);
 	return (array);
 }
-
-//-----------------------------------------------------------------
-// #include <stdio.h>
-
-// int		main(void)
-// {
-// 	// char test[] = "\njrS58VHQ	\n   	p70fL		Kx2sRP0So3E4rC9  \n nebpv3J5ousO84Pa1HjUQOImUhjwZpGn	\n \n	X28iT7Ap9 	DIYAF9ZSpKcs0Rcv\n uzO\n		\nZ7zjEeonALOKQF5xq	\n   \nQxp0b1ufFKGJ	\n2n8R9zUvZEtOwmqf\n	";
-// 	char test[] = "DIYAF9ZSpKcs0Rcv \n uzO\n		\nZ7zjEeonALOKQF5xq	\n   \nQxp0b1ufFKGJ	\n2n8R9zUvZEtOwmqf\n	";
-
-// 	char **arr = ft_split(test);
-
-// 	int i = 0;
-// 	while (arr[i] != 0)
-// 	{
-// 		printf("[%s]\n", arr[i]);
-// 		++i;
-// 	}
-// }
