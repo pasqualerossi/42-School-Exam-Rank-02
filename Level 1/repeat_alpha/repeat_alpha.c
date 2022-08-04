@@ -1,48 +1,27 @@
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-char	ft_repeat_alpha(char *str)
+int main(int argc, char **argv)
 {
 	int i = 0;
-	int j = 0;
-
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			j = str[i] - 65;
-			while (j >= 0)
-			{
-				ft_putchar(str[i]);
-				j--;
-			}
-		}
-		else if (str[i] >= 'a' && str[i] <= 'z')
-		{
-			j = str[i] - 97;
-			while (j >= 0)
-			{
-				ft_putchar(str[i]);
-				j--;
-			}
-		}
-		else
-			ft_putchar(str[i]);
-		i++;
-	}
-	ft_putchar('\n');
-	return (*str);
-}
-
-int		main(int argc, char **argv)
-{
+	
 	if (argc == 2)
-		ft_repeat_alpha(argv[1]);
-	else
-		ft_putchar('\n');
-	return (0);
+	{
+		while (argv[1][i]!='\0')
+		{
+			if (argv[1][i] >= 97 && argv[1][i] <= 122) 
+			{
+				for (int k = 0; k< argv[1][i]-96; k++)
+					write (1, &argv[1][i] , 1);
+			}
+			else if (argv[1][i] >=65 && argv[1][i] <= 90 )
+			{
+				for (int j = 0; j< argv[1][i] - 64; j++)
+					write (1, &argv[1][i] , 1);
+			}
+			else 
+				write (1, &argv[1][i], 1);
+			i++;
+		}
+	}
+	write(1, "\n", 1);
 }
