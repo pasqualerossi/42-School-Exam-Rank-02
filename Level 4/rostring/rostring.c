@@ -1,72 +1,37 @@
 #include <unistd.h>
-#include <stdlib.h>
 
-void	ft_putstr(char *str)
+int main(int argc, char **argv)
 {
 	int i = 0;
-	while (str[i])
-	{
-		write(1, &str[i], 1);
-		i++;
-	}
-}
-
-int		main(int argc, char **argv)
-{
-	char	*mot;
-	int	i;
-	int	d;
-	int	k;
-
-	i = 0;
-	k = 0;
-	mot = NULL;
+	int start;
+	int end;
+	int flag = 0;
+	
 	if (argc > 1)
 	{
-		while (argv[1][i] && (argv[1][i] == ' '
-					|| argv[1][i] == '\t' || argv[1][i] == '\n'))
+		while(argv[1][i] == ' ' || argv[1][i] == '\t')
 			i++;
-		d = i;
-		while (argv[1][i] && argv[1][i] != ' '
-				&& argv[1][i] != '\t' && argv[1][i] != '\n')
+		start = i;
+		while(argv[1][i] && (argv[1][i] != ' ' &&  argv[1][i] != '\t'))
+			i++;
+		end = i;
+		while(argv[1][i] == ' ' || argv[1][i] == '\t')
+			i++;
+		while(argv[1][i] != '\0')
 		{
-			k++;
-			i++;
+			flag = 1;
+			write (1, &argv[1][i], 1);
+			i++;				
 		}
-		mot = (char*)malloc(sizeof(char) * k + 1);
-		i = 0;
-		while (i < k)
+		if (flag == 1)
 		{
-			mot[i] = argv[1][d + i];
-			i++;
+			write (1, " ", 1);
 		}
-		mot[k] = '\0';
-		i = d + k;
-		while (argv[1][i] && (argv[1][i] == ' '
-					|| argv[1][i] == '\t' || argv[1][i] == '\n'))
-			i++;
-		d = 0;	
-		while (argv[1][i])
+		while(start < end)
 		{
-			if (d == 1 && argv[1][i] != ' ' &&
-					argv[1][i] != '\t' && argv[1][i] != '\n')
-			{
-				write(1, " ", 1);
-				write(1, &argv[1][i], 1);
-				d = 0;
-			}
-			else if (d == 0 && argv[1][i] != ' ' &&
-					argv[1][i] != '\t' && argv[1][i] != '\n')
-				write(1, &argv[1][i], 1);
-			else
-				d = 1;
-			i++;
+			write (1, &argv[1][start], 1);
+			start++;
 		}
-		if (i > k)
-			write(1, " ", 1);
-		ft_putstr(mot);
-		free(mot);
-	}
-	write(1, "\n", 1);
-	return (0);
+	}	
+	write (1, "\n",1);	
 }
