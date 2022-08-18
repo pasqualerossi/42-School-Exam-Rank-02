@@ -12,5 +12,3 @@ Your function must be declared as follows:
 
 int	ft_strlen(char *str);
 ```
-
-### Algorithm
