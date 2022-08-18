@@ -1,26 +1,21 @@
-// Passed Moulinette 2019.09.02
-
 #include <unistd.h>
 
-void	snake_to_camel(char *str)
+int main(int argc, char **argv)
 {
-	while (*str != '\0')
+	int i = 0;
+	
+	if (argc ==2 )
 	{
-		if (*str == '_')
+		while(argv[1][i] != '\0')
 		{
-			++str;
-			*str = *str - ('a' - 'A');
+			if (argv[1][i] == '_')
+			{
+				i++;
+				argv[1][i] = argv[1][i]-32;
+			}
+			write (1, &argv[1][i], 1);
+			i++;
 		}
-		write(1, str, 1);
-		++str;
 	}
-}
-
-int	main(int argc, char **argv)
-{
-	if (argc == 2)
-		snake_to_camel(argv[1]);
-
 	write(1, "\n", 1);
-	return (0);
 }
