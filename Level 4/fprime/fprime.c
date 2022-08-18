@@ -1,30 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int	main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int	i;
-	int	nbr;
-
-	if (argc == 2)
+	int i = 2;
+	int num = atoi(argv[1];
+	
+	if (argc==2)
 	{
-		i = 1;
-		nbr = atoi(argv[1]);
-		if (nbr == 1)
+		if (num ==1)
 			printf("1");
-		while (nbr >= ++i)
+		while(i <= num)
 		{
-			if (nbr % i == 0)
+			if (num % i == 0)
 			{
 				printf("%d", i);
-				if (nbr == i)
-					break ;
+				if (num == i)
+					break;
 				printf("*");
-				nbr /= i;
-				i = 1;
+				num = num / i;
+				i = 2;
 			}
+			i++;
 		}
 	}
 	printf("\n");
-	return (0);
 }
