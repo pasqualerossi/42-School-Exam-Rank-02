@@ -1,32 +1,43 @@
 #include <unistd.h>
 
-int	not_seen_before(char *s, int max_pos, char c)
+int check(int c, char *str, int index)
 {
-	int	i = -1;
-
-	while(++i < max_pos)
-		if (s[i] == c)
-			return (0);
-	return (1);
+	int i = 0;
+	
+	while(i < index)
+	{
+		if (str[i] == c)
+			return 0;
+		i++;
+	}
+	return  1;
 }
 
-void	ft_union(char *s1, char *s2)
-{
-	int	i = -1;
-	int	j = -1;
-
-	while (s1[++i])
-		if (not_seen_before(s1, i, s1[i]))
-			write(1, &s1[i], 1);
-	while (s2[++j])
-		if (not_seen_before(s1, i, s2[j]) & not_seen_before(s2, j, s2[j]))
-			write(1, &s2[j], 1);
-}
-
-int	main(int argc, char **argv)
-{
+int main(int argc, char **argv)
+{	
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	
 	if (argc == 3)
-		ft_union(argv[1], argv[2]);
-	write(1, "\n", 1);
-	return (0);
+	{
+		while(argv[1][i] != '\0')
+		{
+			i++;
+		}
+		while(argv[2][j] != '\0')
+		{
+			argv[1][i] = argv[2][j];
+			i++;
+			j++;
+		}
+		i--;
+		while(k <= i)
+		{
+			if(check(argv[1][k], argv[1], k) == 1) 
+				write (1, &argv[1][k], 1); 
+			k++;
+		}
+	}
+	write (1, "\n", 1);
 }
