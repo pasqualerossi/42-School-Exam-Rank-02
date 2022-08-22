@@ -79,7 +79,7 @@ There is no Norminette in this exam.
   - sort_int_tab
   - sort_list
 
-# Exam Refresher
+# Exam Login Details
 
     login -> exam
     password -> exam
@@ -90,13 +90,15 @@ Type examshell in terminal
     pasword -> your password
 
 Allow photo check
-In examshell you may type only 3 commands
 
-status - check the time and other things
+In the  examshell, you have only the following 3 commands:
 
-grademe - checking pushed exercise (moulinet)
+- status - check the time and other things
 
-finish - closing examshell and finish exam
+- grademe - checking pushed exercise (moulinet)
+
+- finish - closing examshell and finish exam
+
 Open new terminal
 
     You can find your exam subject in the directory subject
@@ -111,3 +113,4 @@ Open new terminal
 3. git push
 
 4. After the git push, type `grademe`
+
