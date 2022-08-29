@@ -1,39 +1,36 @@
 #include <stdlib.h>
 
-char    *ft_itoa(int nbr)
+char	*impossible2convert(int nbr)
 {
-	int	len;
-	long	n_tmp;
-	char	*str;
-
-	len = 0;
-	n_tmp = nbr;
-	str[len] ='\0';
-	
-	if (nbr == -2147483648)
-		return ("-2147483648");
-	if (!(str = (char *)malloc(sizeof(char) * len + 1)))
-		return (NULL);
 	if (nbr == 0)
+		return ("0");
+	return ("-2147483648");
+}
+
+char	*ft_itoa(int nbr)
+{
+	static char	base[10] = "0123456789";
+	char		*str;
+	int			minus_check = 0;
+
+	if (nbr == -2147483648 || nbr == 0)
+		return (impossible2convert(nbr));
+	if ((str = malloc(sizeof(str) * 12)))
 	{
-		str[0] = '0';
+		str[11] = '\0';
+		if (nbr < 0)
+		{
+			nbr = -nbr;
+			minus_check = 1;
+		}
+		while (nbr)
+		{
+			*--str = base[nbr % 10];
+			nbr /= 10;
+		}
+		if (minus_check == 1)
+			*--str = '-';
 		return (str);
 	}
-	if (nbr < 0)
-	{
-		len += 1;
-		nbr *= -1;
-		str[0] = '-';
-	}
-	while (n_tmp)
-	{
-		n_tmp /= 10;
-		len += 1;
-	}
-	while (nbr)
-	{
-		str[--len] = (nbr % 10) + '0';
-		nbr /= 10;
-	}
-	return (str);
+	return (NULL);
 }
