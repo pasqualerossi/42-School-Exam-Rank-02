@@ -114,3 +114,6 @@ Open new terminal
 
 4. After the git push, type `grademe`
 
+# Exam Practice
+
+Practice the exam just like you would in the real exam - https://github.com/JCluzet/42_EXAM
