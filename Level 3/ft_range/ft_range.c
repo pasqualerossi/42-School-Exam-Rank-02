@@ -15,24 +15,24 @@
 
 int *ft_range(int start, int end)
 {
-	int *temp;
-	int len;
+	int size = end - start;
+	int *ret;
+	int *pointer;
 
-	if (end < start)
-		len = start - end;
-	else
-		len = end - start;
-	temp = malloc(sizeof(int) * len + 1);
-	if (temp == NULL)
-		return (NULL);
-	while (len >= 0)
+	if (size)
 	{
-		temp[len] = end;
-		if (start > end)
-			end++;
-		else
-			end--;
-		len--;
+		pointer = (int *)malloc(sizeof(int) * size);
+		if (pointer)
+		{
+			ret = pointer;
+			while (start <= end)
+			{
+				*pointer = start;
+				pointer++;
+				start++;
+			}
+			return (ret);
+		}
 	}
-	return (temp);
+	return (NULL);
 }
