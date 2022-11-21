@@ -79,6 +79,26 @@ There is no Norminette in this exam.
   - sort_int_tab
   - sort_list
 
+# Exam Stats
+
+### 4 Levels
+
+- Level 1 - 12 
+  - 3 Functions and 9 Programs
+- Level 2 - 20 
+  - 7 Functions and 13 Programs
+- Level 3 - 15 
+  - 4 Functions and 11 Programs
+- Level 4 - 10 
+  - 4 Functions and 6 Programs
+
+- Total Pool of 57 
+
+### Info
+
+- Function - ft(function)
+- Program - int main()
+
 # Exam Login Details
 
     login -> exam
