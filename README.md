@@ -11,7 +11,7 @@ There is no Norminette in this exam.
 # Exam Questions
 
 ### Question 1 is from Level 1
-
+```
   - first_word
   - fizzbuzz
   - ft_strcpy
@@ -24,9 +24,10 @@ There is no Norminette in this exam.
   - rotone
   - search_and_replace
   - ulstr 
+```
 
 ### Question 2 is from Level 2
-
+```
   - alpha_mirror
   - camel_to_snake
   - do_op
@@ -47,9 +48,9 @@ There is no Norminette in this exam.
   - swap_bits
   - union
   - wdmatch 
-
+```
 ### Question 3 is from Level 3
-
+```
   - add_prime_sum
   - epur_str
   - expand_str
@@ -65,9 +66,9 @@ There is no Norminette in this exam.
   - rstr_capitalizer
   - str_capitalizer
   - tab_mult 
-
+```
 ### Question 4 is from Level 4
-
+```
   - flood_fill
   - fprime
   - ft_itoa
@@ -78,7 +79,7 @@ There is no Norminette in this exam.
   - rostring
   - sort_int_tab
   - sort_list
-
+```
 # Exam Stats
 
 ### 4 Levels
