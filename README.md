@@ -4,9 +4,13 @@ This exam has 4 questions in total. A random question is picked from each level 
 
 If you fail the exam, when you retake the exam next time, you will restart at Level 1 again.
 
+<br>
+
 # Exam Norminette
 
 There is no Norminette in this exam. 
+
+<br>
 
 # Exam Questions
 
@@ -80,6 +84,9 @@ There is no Norminette in this exam.
   - sort_int_tab
   - sort_list
 ```
+
+<br>
+
 # Exam Login Details
 
     login -> exam
@@ -104,17 +111,24 @@ Open new terminal
 
     You can find your exam subject in the directory subject
     Then you can see directory Rendu. It is your repository.
-    You must create the directory named by the project, create .c and/or .h and start working.
-    When you are ready go in Rendu and push the directory by doing the following:
+    You must create a folder named by the project and start working.
+    
+# Exam Submission Details
 
-1. git add .
+When you are ready to sumbit your function/program, go into Rendu and push the folder you created by doing the following:
 
-2. git commit -m "done"
+1. git add <folder name>
+
+2. git status
+
+2. git commit -m "any commit message you like"
 
 3. git push
 
-4. After the git push, type `grademe`
+4. After you git push, type `grademe` in the examshell for your project to be submitted. 
+
+<br>
 
 # Exam Practice
 
-Practice the exam just like you would in the real exam - https://github.com/JCluzet/42_EXAM
+Practice the exam just like you would in the real exam using this tool - https://github.com/JCluzet/42_EXAM
