@@ -3,36 +3,48 @@
 /*                                                        :::      ::::::::   */
 /*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dantremb <dantremb@student.42.fr>          +#+  +:+       +#+        */
+/*   By: saeby <saeby>                              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 08:28:40 by dantremb          #+#    #+#             */
-/*   Updated: 2022/08/15 08:28:41 by dantremb         ###   ########.fr       */
+/*   Updated: 2022/12/29 10:26:13 by saeby            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdio.h>
 
-int *ft_range(int start, int end)
+int	*ft_range(int start, int end)
 {
-	int size = end - start;
-	int *ret;
-	int *pointer;
+	int	*res;
+	int	size;
+	int	i;
 
-	if (size)
-	{
-		pointer = (int *)malloc(sizeof(int) * size);
-		if (pointer)
-		{
-			ret = pointer;
-			while (start <= end)
-			{
-				*pointer = start;
-				pointer++;
-				start++;
-			}
-			return (ret);
-		}
-	}
-	return (NULL);
+	size = (end - start) + 1;
+	i = 0;
+	res = (int *) malloc(size * sizeof(int));
+	if (!res)
+		return (NULL);
+	while (i++ < size)
+		res[i] = start + i;
+	return (res);
 }
+
+/*
+#include <stdio.h>
+int main(void)
+{
+	int	start;
+	int	end;
+	int	i;
+	int	*tab;
+
+	start = 0;
+	end = 0;
+	tab = ft_range(start, end);
+	i = 0;
+	while (i < (end - start) + 1)
+	{
+		printf("%d\n", tab[i]);
+		i++;
+	}
+}
+*/
