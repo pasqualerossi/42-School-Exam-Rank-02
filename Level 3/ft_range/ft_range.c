@@ -27,24 +27,3 @@ int	*ft_range(int start, int end)
 		res[i] = start + i;
 	return (res);
 }
-
-/*
-#include <stdio.h>
-int main(void)
-{
-	int	start;
-	int	end;
-	int	i;
-	int	*tab;
-
-	start = 0;
-	end = 0;
-	tab = ft_range(start, end);
-	i = 0;
-	while (i < (end - start) + 1)
-	{
-		printf("%d\n", tab[i]);
-		i++;
-	}
-}
-*/
