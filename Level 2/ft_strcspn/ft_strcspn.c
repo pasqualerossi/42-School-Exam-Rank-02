@@ -16,8 +16,5 @@ size_t  ft_strcspn(const char *s, const char *reject)
         }
         i++;
     }
-    i = 0;
-    while (s[i] != '\0')
-        i++;
     return (i);
 }
