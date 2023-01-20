@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdio.h>
 
 void	ft_write_number(int number)
 {
