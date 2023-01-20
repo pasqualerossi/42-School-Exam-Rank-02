@@ -15,7 +15,7 @@ int		main()
 
 	while (i <= 100)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if (i % 15 == 0)
 			write (1, "fizzbuzz", 8);
 		else if (i % 3 == 0)
 			write (1, "fizz", 4);
