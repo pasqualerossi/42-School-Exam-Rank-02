@@ -1,72 +1,60 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-int	ft_wordlen(char *str)
+char **ft_split(char *str) 
 {
-	int i = 0;
+    int i = 0;
+    int j = 0;
+    int k = 0;
+    int word_count = 0;
+    int len = strlen(str);
 
-	while (str[i] != '\0' && str[i] != ' ' && str[i] != '\t' && str[i] != '\n')
-		++i;
-	return (i);
-}
-
-char	*word_dupe(char *str)
-{
-	int i = 0;
-	int len = ft_wordlen(str);
-	char *word = malloc(sizeof(char) * (len + 1));
-	
-	word[len] = '\0';
-	while (i < len)
+    while (i < len) 
+    {
+        while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')) 
 	{
-		word[i] = str[i];
-		++i;
-	}
-	return (word);
-}
-
-void	fill_words(char **array, char *str)
-{
-	int word_index = 0;
-	
-	while (*str == ' ' || *str == '\t' || *str == '\n')
-		++str;
-	while (*str != '\0')
+            i++;
+        }
+        if (str[i]) 
 	{
-		array[word_index] = word_dupe(str);
-		++word_index;
-		while (*str != '\0' && *str != ' ' && *str != '\t' && *str != '\n')
-			++str;
-		while (*str == ' ' || *str == '\t' || *str == '\n')
-			++str;
-	}
-}
-
-int		count_words(char *str)
-{
-	int num_words = 0;
-	
-	while (*str == ' ' || *str == '\t' || *str == '\n')
-		++str;
-	while (*str != '\0')
+            word_count++;
+            while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n')) 
+	    {
+                i++;
+            }
+        }
+    }
+    char **result = (char**)malloc(sizeof(char*) * (word_count + 1));
+    if (result == NULL) 
+    {
+        return NULL;
+    }
+    i = 0;
+    while (i < len) 
+    {
+        while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n')) 
 	{
-		++num_words;
-		while (*str != '\0' && *str != ' ' && *str != '\t' && *str != '\n')
-			++str;
-		while (*str == ' ' || *str == '\t' || *str == '\n')
-			++str;
-	}
-	return (num_words);
-}
-
-char	**ft_split(char *str)
-{
-	int		num_words;
-	char	**array;
-	
-	num_words = count_words(str);
-	array = malloc(sizeof(char *) * (num_words + 1));
-	
-	array[num_words] = 0;
-	fill_words(array, str);
-	return (array);
+            i++;
+        }
+        if (str[i]) 
+	{
+            j = i;
+            while (str[j] && (str[j] != ' ' && str[j] != '\t' && str[j] != '\n')) 
+	    {
+                j++;
+            }
+            result[k] = (char*)malloc(sizeof(char) * (j - i + 1));
+            if (result[k] == NULL) 
+	    {
+                return NULL;
+            }
+            strncpy(result[k], str + i, j - i);
+            result[k][j - i] = '\0';
+            k++;
+            i = j;
+        }
+    }
+    result[k] = NULL;
+    return result;
 }
