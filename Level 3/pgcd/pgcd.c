@@ -3,10 +3,10 @@
 
 int main(int argc, char const *argv[])
 {
-	int number1 = atoi(argv[1]);
-	int number2 = atoi(argv[2]);
+	int string1 = atoi(argv[1]);
+	int string2 = atoi(argv[2]);
 
-	if (argc != 3 && number1 <=0 || number2 <= 0)
+	if (argc != 3 && string1 <=0 || string2 <= 0)
 	{
 		printf("\n");
 		return 0;
@@ -14,10 +14,10 @@ int main(int argc, char const *argv[])
 	while (number2 != 0)
 	{
 		//ft_swap
-		int temporary = number2;
-		number2 = number1 % number2;
-		number1 = temporary;
+		int temporary = string2;
+		string2 = string1 % string2;
+		string1 = temporary;
 	}
-	printf("%d\n", number1);
+	printf("%d\n", string1);
 	return 0;
 }
