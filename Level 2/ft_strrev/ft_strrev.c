@@ -2,7 +2,7 @@ char *ft_strrev(char *str)
 {
 	int i = -1;
 	int length = 0;
-	char temporary;;
+	char temporary;
 
 	while (str[length])
 		length++;
