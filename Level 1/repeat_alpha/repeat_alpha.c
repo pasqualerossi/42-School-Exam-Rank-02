@@ -1,27 +1,42 @@
 #include <unistd.h>
 
-int main(int argc, char **argv)
+void    repeat_alpha(char *str)
 {
-	int i = 0;
-	
-	if (argc == 2)
-	{
-		while (argv[1][i]!='\0')
-		{
-			if (argv[1][i] >= 97 && argv[1][i] <= 122) 
-			{
-				for (int k = 0; k< argv[1][i]-96; k++)
-					write (1, &argv[1][i] , 1);
-			}
-			else if (argv[1][i] >=65 && argv[1][i] <= 90 )
-			{
-				for (int j = 0; j< argv[1][i] - 64; j++)
-					write (1, &argv[1][i] , 1);
-			}
-			else 
-				write (1, &argv[1][i], 1);
-			i++;
-		}
-	}
-	write(1, "\n", 1);
+    int i = 0;
+    char c;
+
+    while (*str != '\0')
+    {
+        if ((*str >= 'a' && *str <= 'z') || (*str >= 'A' && *str <= 'Z'))
+        {
+            if (*str >= 'a' && *str <= 'z')
+            {
+                i = *str - '0';
+                c = i - '0';
+                i = c;
+            }
+            else if (*str >= 'A' && *str <= 'Z')
+            {
+                i = *str - '0';
+                c = i + ' ';
+                i = c - '0';
+            }
+            while (i)
+            {
+                write(1, &str[0], 1);
+                i--;
+            }
+        }
+        else
+            write(1, &str[0], 1);
+        str++;
+    }
+}
+
+int main(int ac, char **av)
+{
+    if (ac == 2)
+        repeat_alpha(av[1]);
+    write(1, "\n", 1);
+    return (0);
 }
