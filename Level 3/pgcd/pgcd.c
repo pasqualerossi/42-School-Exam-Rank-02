@@ -11,7 +11,7 @@ int main(int argc, char const *argv[])
 		printf("\n");
 		return 0;
 	}
-	if (string1 <=0 || string2 <= 0)
+	if (string1 <= 0 || string2 <= 0)
 	{
 		printf("\n");
 		return 0;
