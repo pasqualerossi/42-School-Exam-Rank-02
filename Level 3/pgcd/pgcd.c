@@ -18,7 +18,6 @@ int main(int argc, char const *argv[])
 	}
 	while (number2 != 0)
 	{
-		//ft_swap
 		int temporary = string2;
 		string2 = string1 % string2;
 		string1 = temporary;
