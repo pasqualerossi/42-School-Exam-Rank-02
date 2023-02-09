@@ -21,6 +21,11 @@ char *ft_itoa(int nbr)
         return NULL;
     }
     result[len] = '\0';
+    if (nbr == 0)
+    {
+	result[0] = '0';
+	return(result);
+    }
     if (nbr < 0) 
     {
         result[0] = '-';
