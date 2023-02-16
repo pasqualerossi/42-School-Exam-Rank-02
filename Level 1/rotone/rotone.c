@@ -1,21 +1,28 @@
 #include <unistd.h>
 
-int main(int argc, char **argv)
+void	ft_putchar(char c)
 {
-	int i = 0;
-	
-	if (argc == 2)
+	write(1, &c, 1);
+}
+
+void	rotone(char *s)
+{
+	while (*s)
 	{
-		while(argv[1][i] != '\0')
-		{ 
-			if (argv[1][i] == 90 || argv[1][i] == 122)
-				argv[1][i] = argv[1][i] - 25;
-			else if ((argv[1][i] >= 65 && argv[1][i] <= 89) || (argv[1][i] >= 97&& argv[1][i] <= 121)) 
-				argv[1][i]  = argv[1][i] + 1;
-			write(1, &argv[1][i], 1);
-			i++;
-		}
+		if ((*s >= 'A' && *s <= 'Y') || (*s >= 'a' && *s <= 'y'))
+			ft_putchar(*s + 1);
+		else if (*s == 'Z' || *s == 'z')
+			ft_putchar(*s - 25);
+		else
+			ft_putchar(*s);
+		++s;
 	}
-	write (1, "\n", 1);
-	return 0;
+}
+
+int		main(int ac, char **av)
+{
+	if (ac == 2)
+		rotone(av[1]);
+	ft_putchar('\n');
+	return (0);
 }
