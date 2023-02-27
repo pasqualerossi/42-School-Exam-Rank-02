@@ -16,7 +16,7 @@ int main(int argc, char const *argv[])
 		printf("\n");
 		return 0;
 	}
-	while (number2 != 0)
+	while (string2 != 0)
 	{
 		int temporary = string2;
 		string2 = string1 % string2;
