@@ -13,8 +13,8 @@ int *ft_rrange(int start, int end)
 	{
 		while (i < n)
 		{
-			range[i] = start;
-			start++;
+			range[i] = end;
+			end--;
 			i++;
 		}
 	}
