@@ -20,5 +20,5 @@ int     ft_range(int start, int end)
     start--;
     i++;
   }
- return (res);
+  return (res);
 }
