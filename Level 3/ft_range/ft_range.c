@@ -2,7 +2,7 @@
 
 int     ft_range(int start, int end)
 {
-    int i = 0;
+	int i = 0;
   	int len = abs((end - start)) + 1;
   	int res; 
   	res = malloc(sizeof(int) * len);
@@ -11,16 +11,16 @@ int     ft_range(int start, int end)
   	{
     	  if (start < end)
     	  {
-    		  res[i] = start;
-    		  start++;
+		  res[i] = start;
+		  start++;
     		  i++;
-		    }
+          }
   	}
   	else
   	{
-    	res[i] = start;
-    	start--;
-    	i++;
+    		res[i] = start;
+    		start--;
+    		i++;
   	}
-  return (res);
+  	return (res);
 }
