@@ -1,29 +1,24 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_range.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: saeby <saeby>                              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 08:28:40 by dantremb          #+#    #+#             */
-/*   Updated: 2022/12/29 10:26:13 by saeby            ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdlib.h>
 
-int	*ft_range(int start, int end)
+int     ft_range(int start, int end)
 {
-	int	*res;
-	int	size;
-	int	i;
+  int i = 0;
+  int len = abs((end - start)) + 1;
+  int res = malloc(sizeof(int) * len);
 
-	size = (end - start) + 1;
-	i = 0;
-	res = (int *) malloc(size * sizeof(int));
-	if (!res)
-		return (NULL);
-	while (i++ < size)
-		res[i] = start + i;
-	return (res);
+  while (i < len)
+  {
+    if (start < end)
+    {
+    	res[i] = start;
+    	start++;
+    	i++;
+    }
+  else
+  {
+    res[i] = start;
+    start--;
+    i++;
+  }
+ return (res);
 }
