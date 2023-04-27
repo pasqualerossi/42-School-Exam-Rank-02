@@ -1,8 +1,7 @@
 # Exam Details
 
-This exam has 4 questions in total. A random question is picked from each level below. 
-
-If you fail the exam, when you retake the exam next time, you will restart at Level 1 again.
+- This exam has 4 questions in total. A random question is picked from each level below. 
+- If you fail the exam, when you retake the exam next time, you will restart at Level 1 again with a different set of questions.
 
 <br>
 
@@ -15,6 +14,7 @@ There is no Norminette in this exam.
 # Exam Questions
 
 ### Question 1 is from Level 1
+:question: Any of the 12 Functions/Programs Below:
 ```
   - first_word
   - fizzbuzz
@@ -27,10 +27,10 @@ There is no Norminette in this exam.
   - rot_13
   - rotone
   - search_and_replace
-  - ulstr 
+  - ulstr
 ```
-
 ### Question 2 is from Level 2
+:question: Any of the 20 Functions/Programs Below:
 ```
   - alpha_mirror
   - camel_to_snake
@@ -54,6 +54,7 @@ There is no Norminette in this exam.
   - wdmatch 
 ```
 ### Question 3 is from Level 3
+:question: Any of the 15 Functions/Programs Below:
 ```
   - add_prime_sum
   - epur_str
@@ -72,6 +73,7 @@ There is no Norminette in this exam.
   - tab_mult 
 ```
 ### Question 4 is from Level 4
+:question: Any of the 10 Functions/Programs Below:
 ```
   - flood_fill
   - fprime
@@ -85,47 +87,59 @@ There is no Norminette in this exam.
   - sort_list
 ```
 
+### Stats
+:swimmer: Total Pool of 57 Functions/Programs.
+
 <br>
 
 # Exam Login Details
-
-    login -> exam
-    password -> exam
-
+:one: Login With The Following:
+```
+login -> exam
+password -> exam
+```
+:two: In ITerm:
+```
 Type examshell in terminal
-
-    login -> your 42 intra username (eg. prossi)
-    pasword -> your password
-
+```
+:three: Your 42 Intra Account:
+```
+login -> your 42 intra username (eg. prossi)
+pasword -> your password
+```
+:four: Your 42 Intra Photo:
+```
 Allow photo check
-
-In the  examshell, you have only the following 3 commands:
-
+```
+:five: Access Rendu:
+```
+Type 'y' or 'yes'
+```
+:six: In the Exam Shell, You Have Only The Following 3 Commands:
+```
 - status - check the time and other things
-
 - grademe - checking pushed exercise (moulinet)
-
 - finish - closing examshell and finish exam
-
-Open new terminal
-
-    You can find your exam subject in the directory subject
-    Then you can see directory Rendu. It is your repository.
-    You must create a folder named by the project and start working.
-    
+```
+:seven: Open a new iTerm or VSCode:
+```
+- You can find your exam subject in the directory subject
+- Then you can see directory Rendu. It is your repository.
+- You must create a folder named by the project and start working in that folder.
+```
 # Exam Submission Details
 
 When you are ready to sumbit your function/program, go into Rendu and push the folder you created by doing the following:
 
-1. git add <folder name>
+:one: git add <folder name/files in folder>
 
-2. git status
+:two: git status
 
-2. git commit -m "any commit message you like"
+:three: git commit -m "any commit message you like in these strings"
 
-3. git push
+:four: git push
 
-4. After you git push, type `grademe` in the examshell for your project to be submitted. 
+:five: After you git push, type `grademe` in the examshell for your project to be evaluated. 
 
 <br>
 
