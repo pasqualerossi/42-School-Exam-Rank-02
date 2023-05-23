@@ -1,9 +1,9 @@
-int max( int *tab, unsigned int len)
+int max(int *tab, unsigned int len)
 {
-	int result;
-	int i = 0;
-	result = tab[i];
+	unsigned int result;
+	unsigned int i = 0;
 	
+	result = tab[i];
 	while(i < len)
 	{
 		if (result <  tab[i])
