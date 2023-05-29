@@ -151,6 +151,6 @@ You should be able to use both VSCode and Vim in the exam.
 
 <br>
 
-# Exam Practice
+# Exam Practice Tool
 
 Practice the exam just like you would in the real exam using this tool - https://github.com/JCluzet/42_EXAM
