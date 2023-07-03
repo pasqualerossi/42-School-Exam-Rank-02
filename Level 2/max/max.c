@@ -1,5 +1,8 @@
 int max(int *tab, unsigned int len)
 {
+	if (len == 0)
+		return (0);
+	
 	unsigned int result;
 	unsigned int i = 0;
 	
