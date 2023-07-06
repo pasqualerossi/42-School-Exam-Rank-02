@@ -35,7 +35,9 @@ void	put_nbr(int n)
 int main(int ac, char **av)
 {
 
-	if (ac == 2)
+    if (ac < 2)
+        write(1, "0", 1);
+	else if (ac == 2)
 	{
 		int	nbr = ft_atoi(av[1]);
 		int	sum = 0;
@@ -48,6 +50,7 @@ int main(int ac, char **av)
 		}
 		put_nbr(sum);
 	}
-	write(1, "\n", 1);
-	return (0);
+    else if (ac > 2)
+	    write(1, "0", 1);
+    write(1, "\n", 1);
 }
