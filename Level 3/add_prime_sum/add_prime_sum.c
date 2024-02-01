@@ -5,7 +5,7 @@ int	ft_atoi(char *s)
 	int	res = 0;
 
 	while (*s)
-		res = res * 10 + *s++ - 48;
+		res = res * 10 + *s++ - '0';
 	return (res);
 }
 
