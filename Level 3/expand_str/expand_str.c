@@ -3,7 +3,7 @@
 int main(int argc, char const *argv[])
 {
     int i;
-    int flag;
+    int flag = 0;
 
     if (argc == 2)
     {
