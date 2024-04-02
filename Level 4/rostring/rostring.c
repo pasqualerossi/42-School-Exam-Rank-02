@@ -1,41 +1,51 @@
 #include <unistd.h>
 
+void write_word(char *start, char *end)
+{
+    while (start < end)
+    {
+        write(1, start, 1);
+        start++;
+    }
+}
+
 int main(int argc, char **argv)
 {
-    int i;
-    int start;
-    int end;
-    int flag;
+    char *str;
+    char *first_word_start;
+    char *first_word_end;
 
-    flag = 0;
-    if (argc > 1 && argv[1][0])
+    if (argc > 1)
     {
-        i = 0;
-        while (argv[1][i] == ' ' || argv[1][i] == '\t')
-            i++;
-        start = i;
-        while (argv[1][i] != '\0' && argv[1][i] != ' ' && argv[1][i] != '\t')
-            i++;
-        end = i;
-        while (argv[1][i] == ' ' || argv[1][i] == '\t')
-            i++;
-        while(argv[1][i]) 
-        {
-            while ((argv[1][i] == ' ' && argv[1][i + 1] == ' ') || (argv[1][i] == '\t' && argv[1][i + 1] == '\t'))
-                i++; 
-            if (argv[1][i] == ' ' || argv[1][i] == '\t')
-                flag = 1; 
-            write(1, &argv[1][i], 1);
-            i++;
-        }
-        if (flag)
+        str = argv[1];
+        while (*str == ' ' || *str == '\t') 
+            str++;
+        first_word_start = str;
+        while (*str && *str != ' ' && *str != '\t')
+            str++;
+        first_word_end = str;
+        while (*str == ' ' || *str == '\t')
+            str++;
+        if (*str) {
+            while (*str)
+            {
+                if (*str == ' ' || *str == '\t')
+                {
+                    while (*str == ' ' || *str == '\t')
+                        str++;
+                    if (*str)
+                        write(1, " ", 1);
+                } 
+                else 
+                {
+                    write(1, str, 1);
+                    str++;
+                }
+            }
             write(1, " ", 1);
-        while (start < end)
-        {
-            write(1, &argv[1][start], 1);
-            start++;
         }
+        write_word(first_word_start, first_word_end);
     }
     write(1, "\n", 1);
-    return(0);
+    return 0;
 }
