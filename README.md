@@ -90,7 +90,7 @@ Can be any of the 10 Functions/Programs Below:
 
 <br>
 
-# Exam
+# Exam Setup
 
 ### Login Details
 
