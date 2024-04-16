@@ -90,7 +90,7 @@ Can be any of the 10 Functions/Programs Below:
 
 <br>
 
-# Exam Setup
+## Exam Setup
 
 ### Login Details
 
@@ -145,7 +145,7 @@ When you are ready to sumbit your function/program, go into Rendu and push the f
 
 <br>
 
-# Exam IDE
+## Exam IDE
 
 > [!NOTE]
 You should be able to use both VSCode and Vim in the exam.
@@ -154,5 +154,5 @@ You should be able to use both VSCode and Vim in the exam.
 
 <br>
 
-# Exam Practice Tool
+## Exam Practice Tool
 [Link To The Tool](https://github.com/JCluzet/42_EXAM)
