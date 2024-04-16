@@ -7,7 +7,7 @@
 
 ## Exam Levels
 
-### Level 1
+### :one: Level 1
 Can be any of the 12 Functions/Programs Below:
 <table><tr><td>
   
@@ -25,7 +25,7 @@ Can be any of the 12 Functions/Programs Below:
 12. [ulstr](https://github.com/pasqualerossi/42-School-Exam-Rank-02/blob/main/Level%201/ulstr/ulstr.c)
 </td></tr></table>
 
-### Level 2
+### :two: Level 2
 Can be any of the 20 Functions/Programs Below:
 <table><tr><td>
   
@@ -51,7 +51,7 @@ Can be any of the 20 Functions/Programs Below:
 20. [wdmatch](https://github.com/pasqualerossi/42-School-Exam-Rank-02/blob/main/Level%202/wdmatch/wdmatch.c)
 </td></tr></table>
 
-### Level 3
+### :three: Level 3
 Can be any of the 15 Functions/Programs Below:
 <table><tr><td>
   
@@ -72,7 +72,7 @@ Can be any of the 15 Functions/Programs Below:
 15. [tab_mult](https://github.com/pasqualerossi/42-School-Exam-Rank-02/blob/main/Level%203/tab_mult/tab_mult.c)
 </td></tr></table>
 
-### Level 4
+### :four: Level 4
 Can be any of the 10 Functions/Programs Below:
 <table><tr><td>
   
@@ -155,5 +155,4 @@ You should be able to use both VSCode and Vim in the exam.
 <br>
 
 # Exam Practice Tool
-
-Practice the exam just like you would in the real exam using this tool - https://github.com/JCluzet/42_EXAM
+[Link To The Tool](https://github.com/JCluzet/42_EXAM)
