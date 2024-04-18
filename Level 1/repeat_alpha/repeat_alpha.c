@@ -27,7 +27,6 @@ int main(int ac, char **av)
 {
     if (ac == 2)
         repeat_alpha(av[1]);
-    
     write(1, "\n", 1);
     return (0);
 }
