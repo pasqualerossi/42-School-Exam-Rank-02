@@ -2,15 +2,16 @@
 
 int     main(int ac, char **av)
 {
+        int     seen[256] = {0};
+        char    result[256];
+        int     i = 0;
+        int     j = 0;
+
         if (ac != 3)
         {
                 write(1, "\n", 1);
                 return (0);
         }
-        int     seen[256] = {0};
-        char    result[256];
-        int     i = 0;
-        int     j = 0;
 
         while(av[1][i])
         {
