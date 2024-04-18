@@ -2,7 +2,7 @@
 
 void	last_word(char *str)
 {
-	int	j = 0;
+	int j = 0;
 	int i = 0;
 
 	while (str[i])
