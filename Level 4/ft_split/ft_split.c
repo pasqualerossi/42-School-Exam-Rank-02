@@ -17,6 +17,7 @@ char	**ft_split(char *str)
 	int j = 0;
 	int k = 0;
 	int wc = 0;
+	
 	while (str[i])
 	{
 		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
@@ -26,8 +27,10 @@ char	**ft_split(char *str)
 		while (str[i] && (str[i] != ' ' && str[i] != '\t' && str[i] != '\n'))
 			i++;
 	}
+	
 	char **out = (char **)malloc(sizeof(char *) * (wc + 1));
 	i = 0;
+	
 	while (str[i])
 	{
 		while (str[i] && (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'))
