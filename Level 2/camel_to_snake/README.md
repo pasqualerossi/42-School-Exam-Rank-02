@@ -3,7 +3,7 @@
 ```
 Assignment name  : camel_to_snake
 Expected files   : camel_to_snake.c
-Allowed functions: malloc, realloc, write
+Allowed functions: malloc, free, realloc, write
 --------------------------------------------------------------------------------
 
 Write a program that takes a single string in lowerCamelCase format
