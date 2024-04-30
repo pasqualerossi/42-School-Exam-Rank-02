@@ -25,7 +25,6 @@ int main(int ac, char **av)
 				i = 0;
 			}
 		}
-		j++;
 	}
 	write(1, "\n", 1);
 	return 0;
