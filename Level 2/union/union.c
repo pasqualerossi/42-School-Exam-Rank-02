@@ -15,10 +15,10 @@ int     main(int ac, char **av)
 
         while(av[1][i])
         {
-                if(!seen[av[1][i]])
+                if(!seen[(int)av[1][i]])
                 {
                         result[j++] = av[1][i];
-                        seen[av[1][i]] = 1;
+                        seen[(int)av[1][i]] = 1;
                 }
                 i++;
         }
@@ -26,10 +26,10 @@ int     main(int ac, char **av)
 
         while(av[2][i])
         {
-                if(!seen[av[2][i]])
+                if(!seen[(int)av[2][i]])
                 {
                         result[j++] = av[2][i];
-                        seen[av[2][i]] = 1;
+                        seen[(int)av[2][i]] = 1;
                 }
                 i++;
         }
