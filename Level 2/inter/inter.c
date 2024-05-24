@@ -1,29 +1,36 @@
 #include <unistd.h>
 
-int	iter(char *str, char c, int len)
+int has_char(char *str, char c)
 {
-	int	i = 0;
-
-	while (str[i] && (i < len || len == -1))
-		if (str[i++] == c)
-			return (1);
-	return (0);
+    while (*str)
+    {
+        if (*str == c)
+            return 1;
+        str++;
+    }
+    return 0;
 }
 
-int	main(int argc, char *argv[])
+void inter(char *str1, char *str2)
 {
-	int	i;
+    char printed[128] = {0};
+    int i = 0;
 
-	if (argc == 3)
-	{
-		i = 0;
-		while (argv[1][i])
-		{
-			if (!iter(argv[1], argv[1][i], i) && iter(argv[2], argv[1][i], -1))
-				write(1, &argv[1][i], 1);
-			i += 1;
-		}
-	}
-	write(1, "\n", 1);
-	return (0);
+    while (*str1)
+    {
+        if (has_char(str2, *str1) && !has_char(printed, *str1))
+        {
+            write(1, str1, 1);
+            printed[i] = *str1;
+            i++;
+        }
+        str1++;
+    }
+}
+
+int main(int argc, char *argv[])
+{
+    if (argc == 3)
+        inter(argv[1], argv[2]);
+    write(1, "\n", 1);
 }
