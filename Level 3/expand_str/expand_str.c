@@ -14,7 +14,7 @@ int main(int argc, char const *argv[])
         {
             if (argv[1][i] == ' ' || argv[1][i] == '\t')
                 flag = 1;
-            if (!(argv[1][i] == ' ' || argv[1][i] == '\t'))
+            else
             {
                 if (flag)
                     write(1, "   ", 3);
