@@ -1,46 +1,46 @@
-#include <unistd.h>
+# include <unistd.h>
 
-int     main(int ac, char **av)
+int has_char(char *str, char c)
 {
-        int     seen[256] = {0};
-        char    result[256];
-        int     i = 0;
-        int     j = 0;
+    while (*str)
+    {
+        if (*str == c)
+            return 1;
+        str++;
+    }
+    return 0;
+}
 
-        if (ac != 3)
-        {
-                write(1, "\n", 1);
-                return (0);
-        }
+void union_str(char *str1, char *str2)
+{
+    char seen[256] = {0};
+    int i = 0;
 
-        while(av[1][i])
+    while (*str1)
+    {
+        if (!has_char(seen, *str1))
         {
-                if(!seen[(int)av[1][i]])
-                {
-                        result[j++] = av[1][i];
-                        seen[(int)av[1][i]] = 1;
-                }
-                i++;
+            seen[i] = *str1;
+            write(1, str1, 1);
+            i++;
         }
-        i = 0;
+        str1++;
+    }
+    while (*str2)
+    {
+        if (!has_char(seen, *str2))
+        {
+            seen[i] = *str2;
+            write(1, str2, 1);
+            i++;
+        }
+        str2++;
+    }
+}
 
-        while(av[2][i])
-        {
-                if(!seen[(int)av[2][i]])
-                {
-                        result[j++] = av[2][i];
-                        seen[(int)av[2][i]] = 1;
-                }
-                i++;
-        }
-        result[j] = '\0';
-        i = 0;
-
-        while(result[i])
-        {
-                write(1, &result[i], 1);
-                i++;
-        }
-        write(1, "\n", 1);
-        return (0);
+int main(int argc, char *argv[])
+{
+    if (argc == 3)
+        union_str(argv[1], argv[2]);
+    write(1, "\n", 1);
 }
