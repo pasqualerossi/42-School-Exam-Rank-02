@@ -48,6 +48,8 @@ int main(int ac, char **av)
 		}
 		put_nbr(sum);
 	}
+	if (ac != 2)
+		put_nbr(0);
 	write(1, "\n", 1);
 	return (0);
 }
