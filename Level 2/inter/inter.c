@@ -1,36 +1,31 @@
 #include <unistd.h>
-
-int has_char(char *str, char c)
+int main(int ac, char **av)
 {
-    while (*str)
+    int i;
+    int j;
+    int seen[256] = {0}; /* The 256-element array tracks as seen the ASCII characters */
+    if (ac == 3)
     {
-        if (*str == c)
-            return 1;
-        str++;
-    }
-    return 0;
-}
-
-void inter(char *str1, char *str2)
-{
-    char printed[128] = {0};
-    int i = 0;
-
-    while (*str1)
-    {
-        if (has_char(str2, *str1) && !has_char(printed, *str1))
+        i = 0;
+        while(av[1][i])
         {
-            write(1, str1, 1);
-            printed[i] = *str1;
+            j = 0;
+            while(av[2][j])
+            {
+                if (av[1][i] == av[2][j])
+                {
+                    if (!seen[av[1][i]])
+                    {
+                        write(1, &av[1][i], 1);
+                        seen[av[1][i]] = 1;
+                    }
+                    break;
+                }
+                j++;
+            }
             i++;
         }
-        str1++;
     }
-}
-
-int main(int argc, char *argv[])
-{
-    if (argc == 3)
-        inter(argv[1], argv[2]);
     write(1, "\n", 1);
+    return (0);
 }
