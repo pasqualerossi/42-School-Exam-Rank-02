@@ -1,37 +1,29 @@
 #include <unistd.h>
 
-void ft_putchar(char c)
+int main(int ac, char **av)
 {
-    write(1, &c, 1);
-}
-
-void ft_putstr(char *str)
-{
-    while (*str)
+    int i;
+    int j;
+    if (ac == 3)
     {
-        ft_putchar(*str);
-        str++;
+        j = 0;
+        i = 0;
+        while (av[2][j])
+        {
+            if (av[1][i] == av[2][j])
+                i++;
+            j++;
+        }
+        if (av[1][i] == '\0')
+        {
+            i = 0;
+            while(av[1][i])
+            {
+                write(1, &av[1][i], 1);
+                i++;
+            }
+        }
     }
-}
-
-int wdmatch(char *s1, char *s2)
-{
-    while (*s2)
-    {
-        if (*s1 == *s2)
-            s1++;
-        s2++;
-    }
-    return (*s1 == '\0');
-}
-
-int main(int argc, char **argv)
-{
-    if (argc == 3)
-    {
-        if (wdmatch(argv[1], argv[2]))
-            ft_putstr(argv[1]);
-    }
-    ft_putchar('\n');
-    return 0;
+    write(1, "\n", 1);
+    return(0);
 }
