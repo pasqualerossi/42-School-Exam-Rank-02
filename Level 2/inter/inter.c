@@ -3,7 +3,7 @@ int main(int ac, char **av)
 {
     int i;
     int j;
-    int seen[256] = {0}; /* The 256-element array tracks as seen the ASCII characters */
+    int seen[256] = {0};
     if (ac == 3)
     {
         i = 0;
