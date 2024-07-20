@@ -4,7 +4,7 @@ int main(int ac, char **av)
 {
     if (ac == 3)
     {
-        int seen[256] = {0}; /*The _seen_ array tracks characters encountered in both av[1] and av[2].*/
+        int seen[256] = {0};
         int i = 0;
         int j = 0;
 
