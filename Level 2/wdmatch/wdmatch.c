@@ -4,6 +4,7 @@ int main(int ac, char **av)
 {
     int i;
     int j;
+    
     if (ac == 3)
     {
         j = 0;
