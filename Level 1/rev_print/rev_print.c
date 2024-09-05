@@ -10,5 +10,6 @@ char *rev_print(char *str)
 		write(1, &str[i], 1);
 	if (str[0])
 		write(1, &str[0], 1);
+	write(1, "\n", 1);
 	return (str);
 }
