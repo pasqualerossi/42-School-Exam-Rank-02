@@ -3,6 +3,7 @@
 char	*rev_print(char *str)
 {
 	int	i = 0;
+	
 	while(str[i])
 		i++;
 	while(--i >= 0)
