@@ -1,37 +1,48 @@
-#include <stdio.h>
 #include <stdlib.h>
 
-char *ft_itoa(int nbr) 
+int nlen(int nbr)
 {
-	if(nbr == -2147483648)
-		return("-2147483648\0");
-	int n = nbr;
-	int len = 0;
-	if (nbr <= 0)
-		len++;
-	while (n) 
-	{
-		n /= 10;
-		len++;
-	}
-	char *result = (char *)malloc(sizeof(char) * (len + 1));
-	if (result == NULL) 
-		return NULL;
-	result[len] = '\0';
+	int i;
+
 	if (nbr == 0)
+		return (1);
+	i = 0;
+	while (nbr != 0)
 	{
-		result[0] = '0';
-		return(result);
-	}
-	if (nbr < 0) 
-	{
-		result[0] = '-';
-		nbr = -nbr;
-	}
-	while (nbr) 
-	{
-		result[--len] = nbr % 10 + '0';
 		nbr /= 10;
+		i++;
 	}
-	return result;
+	return (i);
+}
+
+int ft_abs(int nbr)
+{
+	if (nbr < 0)
+		return (-nbr);
+	return (nbr);
+}
+
+char	*ft_itoa(int nbr)
+{
+	char *cnum;
+	int len;
+	int i;
+
+	len = nlen(nbr);
+	i = 0;
+	if (nbr < 0)
+		i++;
+	len = len + i;
+	cnum = (char *)malloc((len + 1) * sizeof(char));
+	if (!cnum)
+		return (NULL);
+	cnum[0] = '-';
+	cnum[len] = '\0';
+	while ((len - 1) >= i)
+	{
+		cnum[len - 1] = ft_abs(nbr % 10) + '0';
+		nbr /= 10;
+		len--;
+	}
+	return (cnum);
 }
