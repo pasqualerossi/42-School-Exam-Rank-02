@@ -7,6 +7,7 @@ int main(int argc, char const *argv[])
 
 	if (argc == 2)
 	{
+		flg = 0;
 		i = 0;
 		while (argv[1][i] == ' ' || argv[1][i] == '\t')
 			i += 1;
