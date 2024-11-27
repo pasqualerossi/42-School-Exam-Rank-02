@@ -2,8 +2,8 @@
 
 size_t	ft_strspn(const char *s, const char *accept)
 {
-    int count;
-    int i;
+    size_t count;
+    size_t i;
 
     count = 0;
     i = 0;
