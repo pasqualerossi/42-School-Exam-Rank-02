@@ -10,12 +10,11 @@ int main(int argc, char const *argv[])
 	{
 		if ((nbr1 = atoi(argv[1])) > 0 && (nbr2 = atoi(argv[2])) > 0)
 		{
-			while (nbr1 != nbr2)
+			while (nbr2 != 0)
 			{
-				if (nbr1 > nbr2)
-					nbr1 -= nbr2;
-				else
-					nbr2 -= nbr1;
+				int temp = nbr2;
+				nbr2 = nbr1 % nbr2;
+				nbr1 = temp;
 			}
 			printf("%d", nbr1);
 		}
